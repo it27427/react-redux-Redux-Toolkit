@@ -1,10 +1,8 @@
-import React from 'react';
-
-const Count = () => {
+const Count = ({ count }) => {
   return (
-    <div>
-      <h1>Count</h1>
-    </div>
+    <>
+      <h2 className='text-2xl font-semibold'>{count}</h2>
+    </>
   );
 };
 

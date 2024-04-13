@@ -18,8 +18,10 @@ const Counter = () => {
       <Count count={count} />
 
       <div className='flex space-x-3'>
+        <Button type='danger' handler={handleDecrement}>
+          Decrement
+        </Button>
         <Button handler={handleIncrement}>Increment</Button>
-        <Button handler={handleDecrement}>Decrement</Button>
       </div>
     </div>
   );

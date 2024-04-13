@@ -5,7 +5,7 @@ const HomePage = () => {
         Counter Application
       </h1>
 
-      <div className='max-w-md mx-auto'></div>
+      <div className='max-w-md mx-auto mt-10 space-y-5'></div>
     </div>
   );
 };

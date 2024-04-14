@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { getPosts } from './postsAPI';
 
 const initialState = {
-  post: [],
+  posts: [],
   isLoading: false,
   isError: false,
   error: null,

@@ -7,7 +7,7 @@ const Blogspage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchPosts);
+    dispatch(fetchPosts());
   }, []);
 
   return (

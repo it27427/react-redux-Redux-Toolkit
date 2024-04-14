@@ -27,8 +27,8 @@ const HomePage = () => {
         {counters.map((counter) => (
           <Counter
             key={counter.id}
-            onIncrement={handleIncrement}
-            onDecrement={handleDecrement}
+            onIncrement={() => handleIncrement(counter.id)}
+            onDecrement={() => handleDecrement(counter.id)}
           />
         ))}
 

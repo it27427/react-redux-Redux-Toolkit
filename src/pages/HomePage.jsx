@@ -25,7 +25,11 @@ const HomePage = () => {
 
       <div className='max-w-md mx-auto mt-10 space-y-5'>
         {counters.map((counter) => (
-          <Counter key={counter.id} />
+          <Counter
+            key={counter.id}
+            onIncrement={handleIncrement}
+            onDecrement={handleDecrement}
+          />
         ))}
 
         <Stats totalCount={10} />

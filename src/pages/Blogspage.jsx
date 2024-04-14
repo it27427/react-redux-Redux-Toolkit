@@ -8,7 +8,7 @@ const Blogspage = () => {
 
   useEffect(() => {
     dispatch(fetchPosts());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className='min-h-screen p-10 bg-gray-100 text-slate-700'>

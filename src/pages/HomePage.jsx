@@ -41,6 +41,8 @@ const HomePage = () => {
     setCounters(updatedCounters);
   };
 
+  const totalCount = counters.reduce((acc, cur) => acc + cur.value, 0);
+
   return (
     <div className='min-h-screen p-10 bg-gray-100 text-slate-700'>
       <h1 className='max-w-md mx-auto text-center text-2xl font-bold'>
@@ -57,7 +59,7 @@ const HomePage = () => {
           />
         ))}
 
-        <Stats totalCount={10} />
+        <Stats totalCount={totalCount} />
       </div>
     </div>
   );

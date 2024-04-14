@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Counter from '@/components/Counter';
 import Stats from '@/components/Stats';
 
@@ -10,11 +12,33 @@ const HomePage = () => {
   const [counters, setCounters] = useState(initialCounters);
 
   const handleIncrement = (counterId) => {
-    setCounters((prevCount) => prevCount + 1);
+    const updatedCounters = counters.map((counter) => {
+      if (counter.id === counterId) {
+        return {
+          ...counter,
+          value: counter.value + 1,
+        };
+      }
+
+      return counter;
+    });
+
+    setCounters(updatedCounters);
   };
 
   const handleDecrement = (counterId) => {
-    setCounters((prevCount) => prevCount - 1);
+    const updatedCounters = counters.map((counter) => {
+      if (counter.id === counterId) {
+        return {
+          ...counter,
+          value: counter.value - 1,
+        };
+      }
+
+      return counter;
+    });
+
+    setCounters(updatedCounters);
   };
 
   return (
@@ -27,6 +51,7 @@ const HomePage = () => {
         {counters.map((counter) => (
           <Counter
             key={counter.id}
+            count={counter.value}
             onIncrement={() => handleIncrement(counter.id)}
             onDecrement={() => handleDecrement(counter.id)}
           />

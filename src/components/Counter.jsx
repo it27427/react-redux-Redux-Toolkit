@@ -7,10 +7,10 @@ const Counter = ({ count, onIncrement, onDecrement }) => {
       <Count count={count} />
 
       <div className='flex space-x-3'>
-        <Button type='danger' handler={onIncrement}>
+        <Button type='danger' handler={onDecrement}>
           Decrement
         </Button>
-        <Button handler={onDecrement}>Increment</Button>
+        <Button handler={onIncrement}>Increment</Button>
       </div>
     </div>
   );
